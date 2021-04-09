@@ -71,9 +71,11 @@ footer {
    font-size: 0.85em;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
    footer {
       flex-direction: column;
+      position: sticky;
+      margin-top: 60%;
    }
 }
 
@@ -91,17 +93,24 @@ header img {
    border-radius: 50%;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
    header {
       flex-direction: column;
    }
    header img {
-      margin-bottom: 15 px;
+      margin-bottom: 12px;
+      left: -3;
+   }
+
+   header .nav-left {
+      margin-bottom: 12px;
+      font-size: 1.1em;
    }
 
    header .follow {
-      margin-top: 15px;
       margin-bottom: 15px;
+      padding: 8px 23px 8px 23px;
+      font-size: 0.65em;
    }
 }
 
@@ -122,11 +131,12 @@ main {
    flex-direction: row-reverse;
    flex: 0 1 auto;
    flex-wrap: wrap-reverse;
+   -webkit-flex-wrap: wrap-reverse;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 900px) {
    main {
-      flex-direction: column-reverse;
+      margin-top: 20px;
    }
 }
 
@@ -150,6 +160,23 @@ main {
    text-align-last: left;
 }
 
+@media screen and (max-width: 1000px) {
+   .main-content {
+      flex-direction: column;
+   }
+
+   .main-top {
+      margin-bottom: 20px;
+      margin-left: 45px;
+      font-size: 1.7em;
+   }
+
+   .main-bottom {
+      margin-top: 80px;
+      font-size: 0.95em;
+   }
+}
+
 .main-content {
    position: relative;
 }
@@ -157,10 +184,10 @@ main {
    font-family: "Raleway", sans-serif;
    font-size: 4.5em;
    font-weight: bolder;
-   position: absolute;
+   position: relative;
    color: #642ee4;
-   top: 22%;
-   left: 15%;
+   top: 21%;
+   left: 14%;
    transition: transform 0.2s;
 }
 
@@ -180,14 +207,27 @@ main {
    color: #642ee4;
 }
 
-#profile-foto {
+#profile-photo {
    width: 390px;
-   position: absolute;
-   top: 26%;
-   left: 10%;
+   height: auto;
+   position: flex;
+   background-size: contain;
+   margin-top: 16%;
+   margin-left: 23%;
    clip-path: circle();
 }
 
+@media screen and (max-width: 800px) {
+   #profile-photo {
+      flex-direction: column;
+      width: 300px;
+      margin-top: 8%;
+      margin-left: 15%;
+   }
+}
+.side-bar {
+   margin: 0;
+}
 .top-left {
    display: flex;
    justify-content: center;
