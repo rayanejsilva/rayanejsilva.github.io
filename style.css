@@ -221,8 +221,11 @@ main {
    #profile-photo {
       flex-direction: column;
       width: 300px;
+<<<<<<< HEAD
       margin-top: 8%;
       margin-left: 15%;
+=======
+>>>>>>> 48bfca010f205341775b3a97ec0a595d6fd79de6
    }
 }
 .side-bar {
