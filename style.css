@@ -16,11 +16,13 @@ a {
 }
 
 article {
-   flex: 1 1 55%;
+   order: 2;
+   flex: 1 2 55%;
    background-color: white;
 }
 
 aside {
+   order: 1;
    flex: 1 1 45%;
    background-color: #fff0ea;
 }
@@ -128,14 +130,15 @@ header img {
 main {
    height: 100%;
    display: flex;
-   flex-direction: row-reverse;
+   flex-direction: row;
    flex: 0 1 auto;
-   flex-wrap: wrap-reverse;
-   -webkit-flex-wrap: wrap-reverse;
+   flex-wrap: row wrap;
+   -webkit-flex-wrap: wrap;
 }
 
 @media screen and (max-width: 900px) {
    main {
+      flex-flow: row wrap;
       margin-top: 20px;
    }
 }
@@ -152,34 +155,32 @@ main {
    left: 18%;
    right: 22%;
    margin: -15px 0px 0px -20px;
-}
-
-.main-bottom {
    -ms-text-align-last: left;
    -moz-text-align-last: left;
    text-align-last: left;
 }
 
 @media screen and (max-width: 1000px) {
+   .main-bottom {
+      margin-top: 80px;
+      font-size: 0.95em;
+   }
    .main-content {
       flex-direction: column;
    }
-
    .main-top {
       margin-bottom: 20px;
       margin-left: 45px;
       font-size: 1.7em;
    }
-
-   .main-bottom {
-      margin-top: 80px;
-      font-size: 0.95em;
-   }
 }
 
 .main-content {
    position: relative;
+   max-width: 100%;
+   height: auto;
 }
+
 .main-top {
    font-family: "Raleway", sans-serif;
    font-size: 4.5em;
@@ -208,29 +209,27 @@ main {
 }
 
 #profile-photo {
-   width: 390px;
-   height: auto;
-   position: flex;
-   background-size: contain;
-   margin-top: 16%;
-   margin-left: 23%;
+   max-width: 540px;
+   max-height: 540px;
+   margin-top: 15%;
+   margin-left: 22%;
    clip-path: circle();
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 700px) {
    #profile-photo {
-      flex-direction: column;
       width: 300px;
-<<<<<<< HEAD
-      margin-top: 8%;
-      margin-left: 15%;
-=======
->>>>>>> 48bfca010f205341775b3a97ec0a595d6fd79de6
    }
 }
+
 .side-bar {
-   margin: 0;
+   height: 1080px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   text-align: center;
 }
+
 .top-left {
    display: flex;
    justify-content: center;
